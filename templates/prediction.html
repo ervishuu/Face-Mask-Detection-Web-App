@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <div class='cont'>
+                
+            
+            {% if data[1] > 0.50 %}
+            <h1>I think user not wearing mask</h1>
+            
+            {%else%}
+            <h1> I think User with mask</h1>
+            
+            {%endif%}
+
+        </div>
+            <h3>__Accuracy__ <br> User with mask - predic: <span>{{data[0]}}</span> <br>user not wearing mask - prob: <span>{{data[1]}}</span><br> </h3>
+
+            <img src="{{url_for('load_img')}}" alt='img'>
+            <a href="/" class='btn'>go back</a>
+
+        </center>
+
+     <div class="footer">
+         <p>| Designed by | er_vishuu_vi__jaya | 2020 | </p>
+         </div>
+
+
+    </body>
+</html>
